@@ -15,7 +15,7 @@ Portfolio
 			<li>
 				{{ $portfolioItem->title }}<br>
                 {{ $portfolioItem->description }}<br>
-                {{ $portfolioItem->created_at }}<br>
+                {{ $portfolioItem->created_at->diffForHumans() }}<br>
                 <!--<pre>
 					{{ $loop->first ? 'Es el primero' : '' }}
 					{{ $loop->last ? 'Es el último' : '' }}
