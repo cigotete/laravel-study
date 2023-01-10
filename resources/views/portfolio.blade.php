@@ -23,7 +23,8 @@ Portfolio
 				</pre>-->
 			</li>
 		@endforeach
-	@else
+        {{ $portfolio->links() }}
+    @else
 		<li>No datos</li>
 	@endisset
 </ul>
