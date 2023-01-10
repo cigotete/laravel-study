@@ -13,7 +13,10 @@ Portfolio
 	@isset ($projects)
 		@foreach ($projects as $projectItem)
 			<li>
-				{{ $projectItem->title }}<br>
+				<a href="{{ route('portfolio.show', $projectItem) }}">
+                {{ $projectItem->title }}
+                </a>
+                <br>
                 {{ $projectItem->description }}<br>
                 {{ $projectItem->created_at->diffForHumans() }}<br>
                 <!--<pre>
