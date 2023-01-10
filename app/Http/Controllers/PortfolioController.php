@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PortfolioController extends Controller
 {
@@ -14,12 +14,7 @@ class PortfolioController extends Controller
     public function index()
     {
         //
-        $portfolio = [
-            ['title' => 'Portfolio 1'] ,
-            ['title' => 'Portfolio 2'] ,
-            ['title' => 'Portfolio 3'] ,
-            ['title' => 'Portfolio 4'] ,
-        ];
+        $portfolio = DB::table('projects')->get();
         return view('portfolio', ['portfolio' => $portfolio]);
     }
 

@@ -13,12 +13,14 @@ Portfolio
 	@isset ($portfolio)
 		@foreach ($portfolio as $portfolioItem)
 			<li>
-				{{ $portfolioItem['title'] }}
-				<pre>
+				{{ $portfolioItem->title }}<br>
+                {{ $portfolioItem->description }}<br>
+                {{ $portfolioItem->created_at }}<br>
+                <!--<pre>
 					{{ $loop->first ? 'Es el primero' : '' }}
 					{{ $loop->last ? 'Es el último' : '' }}
 					{{ var_dump($loop) }}
-				</pre>
+				</pre>-->
 			</li>
 		@endforeach
 	@else
