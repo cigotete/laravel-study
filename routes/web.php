@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\MessageController;
 
 /*
@@ -29,7 +29,8 @@ Route::get('/about', function () {
 //Route::view('/portfolio', 'portfolio', array('portfolio' => $portfolio))->name('portfolio');
 
 //Route::get('/portfolio', PortfolioController::class)->name('portfolio');
-Route::get('/portfolio',  [PortfolioController::class, 'index'])->name('portfolio');
+Route::get('/portfolio',  [ProjectController::class, 'index'])->name('projects.index');
+Route::get('/portfolio/{id}',  [ProjectController::class, 'show'])->name('projects.show');
 
 //Route::resource('projects', PortfolioController::class)->only('index', 'show');
 
