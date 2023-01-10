@@ -13,7 +13,7 @@ Portfolio
 	@isset ($projects)
 		@foreach ($projects as $projectItem)
 			<li>
-				<a href="{{ route('portfolio.show', $projectItem) }}">
+				<a href="{{ route('projects.show', $projectItem) }}">
                 {{ $projectItem->title }}
                 </a>
                 <br>
