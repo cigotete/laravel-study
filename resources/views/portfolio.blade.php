@@ -10,12 +10,12 @@ Portfolio
 
 
 <ul>
-	@isset ($portfolio)
-		@foreach ($portfolio as $portfolioItem)
+	@isset ($projects)
+		@foreach ($projects as $projectItem)
 			<li>
-				{{ $portfolioItem->title }}<br>
-                {{ $portfolioItem->description }}<br>
-                {{ $portfolioItem->created_at->diffForHumans() }}<br>
+				{{ $projectItem->title }}<br>
+                {{ $projectItem->description }}<br>
+                {{ $projectItem->created_at->diffForHumans() }}<br>
                 <!--<pre>
 					{{ $loop->first ? 'Es el primero' : '' }}
 					{{ $loop->last ? 'Es el último' : '' }}
@@ -23,7 +23,7 @@ Portfolio
 				</pre>-->
 			</li>
 		@endforeach
-        {{ $portfolio->links() }}
+        {{ $projects->links() }}
     @else
 		<li>No datos</li>
 	@endisset

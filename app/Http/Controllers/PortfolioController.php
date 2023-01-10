@@ -14,8 +14,8 @@ class PortfolioController extends Controller
     public function index()
     {
         //
-        $portfolio = Project::orderBy("id", "desc")->paginate(2);
-        return view('portfolio', ['portfolio' => $portfolio]);
+        $projects = Project::orderBy("id", "desc")->paginate(2);
+        return view('portfolio', ['projects' => $projects]);
     }
 
 }
