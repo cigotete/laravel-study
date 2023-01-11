@@ -8,7 +8,7 @@ Portfolio
 Portfolio
 
 
-
+<a href="{{ route('projects.create') }}">Crear proyecto</a>
 <ul>
 	@isset ($projects)
 		@foreach ($projects as $projectItem)

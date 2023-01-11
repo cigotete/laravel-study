@@ -6,7 +6,7 @@
 
 @section('content')
     Create Project
-    <form action="">
+    <form method="POST" action="{{ route('projects.store') }}">
         @csrf
         <label for="">Title</label>
         <input type="text" name="title"></br>
