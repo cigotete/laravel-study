@@ -30,6 +30,7 @@ Route::get('/about', function () {
 
 //Route::get('/portfolio', PortfolioController::class)->name('portfolio');
 Route::get('/portfolio',  [ProjectController::class, 'index'])->name('projects.index');
+Route::get('/portfolio/create',  [ProjectController::class, 'create'])->name('projects.create');
 Route::get('/portfolio/{project}',  [ProjectController::class, 'show'])->name('projects.show');
 
 //Route::resource('projects', PortfolioController::class)->only('index', 'show');
