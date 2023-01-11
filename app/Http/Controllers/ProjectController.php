@@ -32,7 +32,7 @@ class ProjectController extends Controller
 
     public function store(Request $request)
     {
-
+        /*
         $title = $request->title;
         $url = $request->url;
         $desc = $request->description;
@@ -41,6 +41,9 @@ class ProjectController extends Controller
             'url' => $url,
             'description' => $desc,
         ]);
+        */
+        Project::create( request()->only('title', 'url', 'description') );
+        //Project::create( request()->all() ); //Not recommended due allow other fields.
         return redirect()->route('projects.index');
     }
 }
