@@ -5,8 +5,8 @@
 @endsection
 
 @section('content')
-    Project: {{$project->title}}
-
+    Project: {{$project->title}}<br>
+    <a href="{{ route('projects.edit', $project) }}">Editar</a>
 
 
 @isset ($project)

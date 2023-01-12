@@ -31,6 +31,8 @@ Route::get('/about', function () {
 //Route::get('/portfolio', PortfolioController::class)->name('portfolio');
 Route::get('/portfolio',  [ProjectController::class, 'index'])->name('projects.index');
 Route::get('/portfolio/create',  [ProjectController::class, 'create'])->name('projects.create');
+Route::get('/portfolio/{project}/edit',  [ProjectController::class, 'edit'])->name('projects.edit');
+Route::patch('/portfolio/{project}',  [ProjectController::class, 'update'])->name('projects.update');
 Route::post('/portfolio',  [ProjectController::class, 'store'])->name('projects.store');
 Route::get('/portfolio/{project}',  [ProjectController::class, 'show'])->name('projects.show');
 
