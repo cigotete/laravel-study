@@ -14,11 +14,11 @@
     <form method="POST" action="{{ route('projects.store') }}">
         @csrf
         <label for="">Title</label>
-        <input type="text" name="title"></br>
+        <input type="text" name="title" value="{{ old('title') }}"></br>
         <label for="">Url</label>
-        <input type="text" name="url"></br>
+        <input type="text" name="url" value="{{ old('url') }}"></br>
         <label for="">Description</label>
-        <textarea name="description"></textarea></br>
+        <textarea name="description">{{ old('description') }}</textarea></br>
         <button>Create project</button>
     </form>
 
