@@ -13,7 +13,7 @@ class CreateProjectRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,16 @@ class CreateProjectRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => 'required',
+            'url' => 'required',
+            'description' => 'nullable',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'title.required' => __('The project needs a title.'),
         ];
     }
 }
