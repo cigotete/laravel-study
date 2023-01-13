@@ -6,11 +6,7 @@
 
 @section('content')
     Edit Project
-    @if($errors->any())
-        @foreach($errors->all() as $error)
-            <p>{{ $error }}</p>
-        @endforeach
-    @endif
+    @include('partials.validation-errors')
     <form method="POST" action="{{ route('projects.update', $project) }}">
         @csrf @method('PATCH')
         <label for="">Title</label>
