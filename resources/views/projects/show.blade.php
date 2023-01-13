@@ -6,6 +6,8 @@
 
 @section('content')
     Project: {{$project->title}}<br>
+    @include('partials.session-status')<br>
+
     <a href="{{ route('projects.edit', $project) }}">Editar</a>
     <form method="POST" action="{{ route('projects.destroy', $project) }}">
         @csrf @method('DELETE')

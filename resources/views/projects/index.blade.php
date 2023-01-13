@@ -5,8 +5,8 @@ Portfolio
 @endsection
 
 @section('content')
-Portfolio
-
+Portfolio<br>
+@include('partials.session-status')<br>
 
 <a href="{{ route('projects.create') }}">Crear proyecto</a>
 <ul>

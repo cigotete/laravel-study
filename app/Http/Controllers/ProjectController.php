@@ -37,7 +37,7 @@ class ProjectController extends Controller
     {
         Project::create( $request->validated() );
         //Project::create( request()->all() ); //Not recommended due allow other fields.
-        return redirect()->route('projects.index');
+        return redirect()->route('projects.index')->with('status', __('Item created'));
     }
 
     public function edit(Project $project)
@@ -49,11 +49,11 @@ class ProjectController extends Controller
     public function update(Project $project, SaveProjectRequest $request)
     {
         $project->update( $request->validated() );
-        return redirect()->route('projects.show', $project);
+        return redirect()->route('projects.show', $project)->with('status', __('Item updated'));
     }
 
     public function destroy(Project $project) {
         $project->delete();
-        return redirect()->route('projects.index');
+        return redirect()->route('projects.index')->with('status', __('Item deleted'));
     }
 }
