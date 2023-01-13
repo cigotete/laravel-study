@@ -8,14 +8,7 @@
     Create Project
     @include('partials.validation-errors')
     <form method="POST" action="{{ route('projects.store') }}">
-        @csrf
-        <label for="">Title</label>
-        <input type="text" name="title" value="{{ old('title') }}"></br>
-        <label for="">Url</label>
-        <input type="text" name="url" value="{{ old('url') }}"></br>
-        <label for="">Description</label>
-        <textarea name="description">{{ old('description') }}</textarea></br>
-        <button>Create project</button>
+        @include('projects._form', ['btnText' => __('Save')])
     </form>
 
 @endsection

@@ -28,7 +28,9 @@ class ProjectController extends Controller
     public function create()
     {
         //
-        return view('projects.create');
+        return view('projects.create',  [
+            'project' => new Project // new Project object is passed in order to normalize create and edit form views.
+        ]);
     }
 
     public function store(SaveProjectRequest $request)
