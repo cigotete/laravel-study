@@ -35,7 +35,7 @@ Route::get('/portfolio/{project}/edit',  [ProjectController::class, 'edit'])->na
 Route::patch('/portfolio/{project}',  [ProjectController::class, 'update'])->name('projects.update');
 Route::post('/portfolio',  [ProjectController::class, 'store'])->name('projects.store');
 Route::get('/portfolio/{project}',  [ProjectController::class, 'show'])->name('projects.show');
-
+Route::delete('/portfolio/{project}',  [ProjectController::class, 'destroy'])->name('projects.destroy');
 //Route::resource('projects', PortfolioController::class)->only('index', 'show');
 
 Route::get('/contact', function () {
