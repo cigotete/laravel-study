@@ -24,11 +24,11 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
-
-
-//Route::view('/portfolio', 'portfolio', array('portfolio' => $portfolio))->name('portfolio');
-
-//Route::get('/portfolio', PortfolioController::class)->name('portfolio');
+Route::resource('portfolio', 'App\Http\Controllers\ProjectController', ['parameters' => [
+    'portfolio' => 'project'
+], 'names' => 'projects'
+]);
+/* // Comented because was replaced by a Resource.
 Route::get('/portfolio',  [ProjectController::class, 'index'])->name('projects.index');
 Route::get('/portfolio/create',  [ProjectController::class, 'create'])->name('projects.create');
 Route::get('/portfolio/{project}/edit',  [ProjectController::class, 'edit'])->name('projects.edit');
@@ -36,7 +36,7 @@ Route::patch('/portfolio/{project}',  [ProjectController::class, 'update'])->nam
 Route::post('/portfolio',  [ProjectController::class, 'store'])->name('projects.store');
 Route::get('/portfolio/{project}',  [ProjectController::class, 'show'])->name('projects.show');
 Route::delete('/portfolio/{project}',  [ProjectController::class, 'destroy'])->name('projects.destroy');
-//Route::resource('projects', PortfolioController::class)->only('index', 'show');
+*/
 
 Route::get('/contact', function () {
     return view('contact');
