@@ -41,5 +41,8 @@
     "The project needs a title.": "El proyecto needs a título.",
     "Save": "Guardar",
     "Update": "Actualizar",
-    "Delete": "Borrar"
+    "Delete": "Borrar",
+    "Item created": "Item creado",
+    "Item updated": "Item actualizado",
+    "Item deleted": "Item eliminado"
 }
