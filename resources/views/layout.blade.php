@@ -10,7 +10,8 @@
     </style>
 </head>
 <body>
-    @include('partials.nav')
+    @include('partials.nav')<br>
+    @include('partials.session-status')<br>
 	@yield('content')
 </body>
 </html>

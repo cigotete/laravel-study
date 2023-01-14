@@ -6,7 +6,6 @@
 
 @section('content')
     Create Project<br>
-    @include('partials.session-status')<br>
     @include('partials.validation-errors')<br>
 
     <form method="POST" action="{{ route('projects.store') }}">
