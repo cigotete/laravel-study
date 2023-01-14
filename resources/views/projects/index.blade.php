@@ -6,8 +6,9 @@ Portfolio
 
 @section('content')
 Portfolio<br>
-
+@auth
 <a href="{{ route('projects.create') }}">Crear proyecto</a>
+@endauth
 <ul>
 	@isset ($projects)
 		@foreach ($projects as $projectItem)

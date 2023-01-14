@@ -7,11 +7,13 @@
 @section('content')
     Project: {{$project->title}}<br>
 
+    @auth
     <a href="{{ route('projects.edit', $project) }}">Editar</a>
     <form method="POST" action="{{ route('projects.destroy', $project) }}">
         @csrf @method('DELETE')
         <button>{{ __('Delete') }}</button>
     </form>
+    @endauth
 
 @isset ($project)
     <ul>
