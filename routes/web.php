@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\MessageController;
@@ -15,6 +16,9 @@ use App\Http\Controllers\MessageController;
 |
 */
 
+DB::listen(function($query) {
+    var_dump($query->sql);
+});
 
 Route::get('/', function () {
     return view('home');
